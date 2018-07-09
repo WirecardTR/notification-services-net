@@ -9,7 +9,7 @@ namespace notification_services_net
     /// <summary>
     /// Summary description for notification_services_net
     /// </summary>
-    [WebService(Namespace = "http://tempuri.org/")]
+    [WebService(Namespace = "http://cservices.mikro-odeme.com.tr/mapping/generated")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
@@ -17,8 +17,8 @@ namespace notification_services_net
     public class notification_services_net : System.Web.Services.WebService
     {
 
-        [WebMethod]
-        public string ReceiveOrderResult(Guid OrderObjectId,string GSM,string MPAY,string SMSContent,double TotalPrice,double TotalUnitPrice,int State,int StatusCode,string ErrorCode,string ErrorMessage,DateTime PaymentDateTime,int GsmOperator,int GsmType,Guid SubscriberId, List<CSaleProduct> Products, int OrderChannelId,int PaymentTypeId,int PaymentCategoryId,string Pin)
+        [WebMethod(EnableSession = true)]
+        public string ReceiveOrderResult(input input)
         {
             return string.Empty;
         }
